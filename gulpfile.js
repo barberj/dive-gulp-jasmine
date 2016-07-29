@@ -4,17 +4,13 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     exit = require('gulp-exit'),
-    jasmine = require('gulp-jasmine');
+    jasmine = require('gulp-jasmine-phantom');
 
 gulp.task('spec', function() {
   return gulp.src('spec/**/*').
     pipe(jasmine({
-      config: {
-        spec_dir: 'spec',
-        helpers: [
-          'helpers/spec_helper.js'
-        ]
-      }
+      specHtml: './SpecRunner.html',
+      integration: true
     }));
 });
 
