@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 gulp.task('spec', function() {
   return gulp.src('spec/**/*').
     pipe(jasmine({
-      specHtml: './SpecRunner.html',
+      specHtml: 'specRunner.html',
       integration: true
     }));
 });
