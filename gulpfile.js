@@ -4,14 +4,12 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     exit = require('gulp-exit'),
-    jasmine = require('gulp-jasmine-phantom');
+    jasmine = require('gulp-jasmine-browser');
 
 gulp.task('spec', function() {
-  return gulp.src('spec/**/*').
-    pipe(jasmine({
-      specHtml: 'specRunner.html',
-      integration: true
-    }));
+  return gulp.src(['app.js', 'spec/**/*']).
+    pipe(jasmine.specRunner({console: true})).
+    pipe(jasmine.headless());
 });
 
 gulp.task('default', function() {
