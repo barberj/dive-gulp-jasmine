@@ -1,0 +1,2 @@
+function Player(){}Player.prototype.play=function(i){this.currentlyPlayingSong=i,this.isPlaying=!0},Player.prototype.pause=function(){this.isPlaying=!1},Player.prototype.resume=function(){if(this.isPlaying)throw new Error("song is already playing");this.isPlaying=!0},Player.prototype.makeFavorite=function(){this.currentlyPlayingSong.persistFavoriteStatus(!0)};
+function Song(){}Song.prototype.persistFavoriteStatus=function(t){throw new Error("not yet implemented")};

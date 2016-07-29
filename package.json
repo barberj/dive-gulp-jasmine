@@ -1,0 +1,20 @@
+{
+  "name": "jasmine-standalone-2.4.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-register": "^6.11.6",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-exit": "0.0.2",
+    "gulp-jasmine": "^2.4.0",
+    "gulp-uglify": "^1.5.4",
+    "jasmine": "^2.4.1"
+  }
+}
